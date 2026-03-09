@@ -14,8 +14,9 @@ int main(){
 	cin>>num1>>num2;
 	
 	cout<<"Before swapping: "<<num1<<" "<<num2<<endl;
-	swap(&num1,&num2);
+	swap(num1,num2);
 	cout<<"After swapping: "<<num1<<" "<<num2;
 	return 0;
 }
+
 

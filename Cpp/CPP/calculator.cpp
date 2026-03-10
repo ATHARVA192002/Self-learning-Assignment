@@ -13,32 +13,32 @@ class Calculator
 		cin>>num1>>num2;
 	}
 	
-	int add()
+	void add()
 	{
-		return num1+num2;
+		cout<< num1+num2<<endl;
 	}
 	
-	int subtract()
+	void subtract()
 	{
-		return num1-num2;
+		cout<< num1-num2<<endl;
 	}
 	
-	int multiply()
+	void multiply()
 	{
-		return num1*num2;
+		cout<< num1*num2<<endl;
 	}
 	
-	int divide()
+	void divide()
 	{
-		return num1/num2;
+		cout<< num1/num2<<endl;
 	}
-	int square1()
+	void square1()
 	{
-		return num1*num1;
+		cout<< num1*num1<<endl;
 	}
-	int square2()
+	void square2()
 	{
-		return num2*num2;
+		cout<< num2*num2<<endl;
 	}
 	
 };
@@ -56,4 +56,3 @@ int main()
    c1.square1();
    c1.square2();
 }
-

@@ -1,0 +1,36 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#b1").click(function(){
+//			let f1 =(document.getElementById("i1").value);
+			let f1 = $("#i1").val();
+			let fact= 1;
+			for(var i=1; i<=f1; i++){
+				fact = fact*i;
+			}
+//			document.getElementById("p1").innerText = fact;
+			$("#p1").text(fact);
+	
+		})
+	}
+	
+	)
+
+
+
+</script>
+
+</head>
+
+<body>
+<fieldset>
+<legend>Factorial</legend>
+<input id="i1" type="number"/>
+<p id="p1"></p>
+<button id="b1">Calculate </button>
+</fieldset>
+</body>
+
+</html>

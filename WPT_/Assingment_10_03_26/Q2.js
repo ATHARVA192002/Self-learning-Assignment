@@ -9,8 +9,9 @@ let b =
 	{
 		if(Object.hasOwn(b,show))
 		{
-			const element = b[key];
+			const element = b[show];
 			console.log(element);
 		}
 	}
 			
+

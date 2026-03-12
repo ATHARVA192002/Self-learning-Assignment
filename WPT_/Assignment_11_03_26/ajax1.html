@@ -11,8 +11,19 @@
 		console.log(this.status);
 			if (this.readyState == 4 && this.status == 200){
 				let d = JSON.parse(this.responseText);
-				console.log(d);
-				document.getElementById("d1").innerText =JSON.stringify(d,null,1);
+				let table = document.getElementById("t1");
+				for(let i = 0; i < d.length; i++){
+				
+					let row = table.insertRow();
+
+					let r1 = row.insertCell(0);
+					let r2 = row.insertCell(1);
+					let r3 = row.insertCell(2);
+
+					c1.innerHTML = d[i].id;
+					c2.innerHTML = d[i].title;
+					c3.innerHTML = d[i].price;
+				}
 			}
 		
 		
@@ -26,9 +37,16 @@
 <body>
 <h3>Data</h3>
 <button onclick="loadData()">Fetch</button>
-<div id="d1"></div>
+
+<table id="t1" border="1">
+<tr>
+<th>id</th>
+<th>title</th>
+<th>price</th>
+</tr>
+</table>
+
 
 </body>
-
 
 </html>

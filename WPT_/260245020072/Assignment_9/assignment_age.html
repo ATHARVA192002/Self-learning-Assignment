@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Age Calculator</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$("#birthDate").change(function () {
+
+		var birthDate = new Date($(this).val());
+		var today = new Date();
+
+		var age = today.getFullYear() - birthDate.getFullYear();
+
+		if (
+			 today.getMonth() < birthDate.getMonth() ||
+			(today.getMonth() == birthDate.getMonth() && today.getDate() < birthDate.getDate())
+		) {
+			age--;
+		}
+
+		$("#age").text(age + " years");
+
+	});
+	
+	}
+	);
+
+</script>
+
+</head>
+
+<body>
+
+Birth Date:
+<input type="date" id="birthDate">
+
+<br><br>
+
+Age: <span id="age"></span>
+
+
+
+</body>
+</html>

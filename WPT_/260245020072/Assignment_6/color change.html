@@ -1,0 +1,41 @@
+<html>
+<head>
+<title> Paragraph Colour Change</title>
+</head>
+
+<body>
+
+<p id="p1">
+	Hello
+</p>
+<button onclick="change('p1')">Change Color of Paragraph 1</button>
+
+<p id="p2">
+	Bye
+</p>
+<button onclick="change('p2')">Change Color of Paragraph 2</button>
+
+<p id="p3">
+	Thanks
+</p>
+<button onclick="change('p3')">Change Color of Paragraph 3</button>
+
+<p id="p4">
+	Sorry</p>
+<button onclick="change('p4')">Change Color of Paragraph 4</button><br>
+
+<input type="color" id="c1">
+
+</body>
+<script type="text/javascript">
+
+function change(id)
+{
+	let a = document.getElementById("c1").value;
+	
+	document.getElementById(id).style.backgroundColor = a;
+	document.getElementById(id).style.fontWeight = "bold";
+	}
+</script>
+</html>
+

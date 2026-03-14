@@ -1,0 +1,49 @@
+<html>
+<head>
+<script>
+function data(){
+
+		let a = new XMLHttpRequest();
+
+
+		let obj1 = {
+			name: document.querySelector("#i1").value
+		}
+
+
+
+		a.onreadystatechange=function()
+		{
+			if (this.readyState==4 )
+			{
+				if(this.status==201)
+				{
+					document.getElementById("ex").innerHTML = this.responseText;
+					console.log("data posted successfully");
+					console.log(this.responseText)
+				}else
+				{
+					console.log("error")
+				}
+			}
+		}
+		
+		a.open("POST","https://jsonplaceholder.typicode.com/todos",true);
+		a.setRequestHeader('Content-type', 'application/json')
+		a.send(JSON.stringify(obj1));
+
+}
+
+
+</script>
+
+</head>
+<body>
+<label>Data: </label>
+<input type="text" id="i1" />
+
+<button type="button" onclick ="data()">Submit</button>
+<div  id="ex"></div>
+
+</body>
+</html>

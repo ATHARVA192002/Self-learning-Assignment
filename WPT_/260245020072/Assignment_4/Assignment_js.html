@@ -1,0 +1,64 @@
+<html>
+
+<head>
+</head>
+
+<body>
+<h1>Pattern</h1>
+<div id="p1"></div>
+
+<br/><br/>
+
+Enter a Number :
+<input type="number" id="num" required>
+
+<button onclick="findSquare()">Find Square</button>
+<button onclick="table()">Table</button>
+
+<div id="result"></div>
+
+<script type="text/javascript">
+
+function table ()
+{
+var a = 10;
+var val;
+
+for(var i=1;i<=10;i++){
+    val = a*i;
+    document.getElementById("p1").innerText += "\n" + val+"\n";
+	console.log(val);
+}
+}
+
+// Pattern loop
+for(var i=1;i<=4;i++)
+{
+    for(var j=4;j>=i;j--)
+    {
+        document.getElementById("p1").innerText += "*";
+    }
+    document.getElementById("p1").innerText += "\n";
+}
+
+function findSquare()
+{
+    var n = document.getElementById("num").value;
+
+    if(n == "")
+    {
+        alert("Please enter a number");
+        return;
+    }
+
+    var square = n * n;
+
+    document.getElementById("result").innerHTML =
+    "Square of " + n + " is : " + square;
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <body>
+         <strong>New User Form</strong>
+    <form>
+        <fieldset>
+            <legend>STUDENT::</legend>
+            <label>Frist Name:</label>
+            <input type="text" id="fName">
+            <label>Last Name:</label>
+            <input type="text" id="lName">
+            <br><br>
+            <label>Email:</label>
+            <input type="email" required id="email">
+			<br><br>
+            <label>Password:</label>
+            <input type="password" required>
+            <br><br>
+            <label>Date of birth:</label>
+            <input type="date" id="date">
+            <br><br>
+        <button onclick="registerDetails()"> Register </button>  
+        </fieldset>
+         <h2>User Information</h2>
+
+    <table border="1" id="outputTable">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Id</th>
+            <th>Date Of Birth</th>
+        </tr>
+        <tr>
+            <td id="showfName"></td>
+            <td id="showlName"></td>
+            <td id="showEmail"></td>
+            <td id="showDate"></td>
+        </tr>
+    </table>
+
+    </form>
+    <script>
+        function registerDetails(){
+            var FirstName = document.getElementById("fName").value;
+            var LastName = document.getElementById("lName").value;
+            var email = document.getElementById("email").value;
+            var dateOfBirth = document.getElementById("date").value;
+            
+
+           document.getElementById("showfName").innerHTML = FirstName;
+           document.getElementById("showlName").innerHTML = LastName;
+           document.getElementById("showEmail").innerHTML = email;
+           document.getElementById("showDate").innerHTML = dateOfBirth;
+           
+
+           document.getElementById("outputTable").style.display = "table";
+
+        }
+    </script>
+		
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0">
+    <title>FACTORIAL</title>
+    <script src = "https://code.jquery.com/jquery-4.0.0.js"></script>
+	
+	<script>
+		$(document).ready(function()
+		{
+				$("#bt1").click(function(){
+				
+						let a = $("#num").val();
+						console.log(a);
+						let res=1;
+						for(let i = 1 ; i<=a ; i++)
+						{
+							res = res*i;
+						}
+						
+						$("#p1").text(res);
+						
+				}
+				);
+		}
+		);
+    </script>
+</head>
+
+
+<body>
+
+    <p id="p1">Fetch Factorial no.</h2>
+	
+	<input type=number id="num">
+    <button id="bt1"> Show</button>
+
+
+</body>
+
+</html>

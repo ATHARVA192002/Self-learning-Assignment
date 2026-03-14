@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0">
+    <title>Animate</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	
+	<script>
+		$(document).ready(function()
+		{
+				$("#bt1").click(function()
+				{
+					$("#p1").animate({left : "300px"});	
+					$("#p1").animate({width : "300px"});
+					$("#p1").animate({height : "500px"});
+					$("#p1").animate({right : "200px"});
+					$("#p1").animate({width : "100px"});
+					$("#p1").animate({height: "100px"});
+				}
+				);
+				
+				$("#bt2").click(function()
+				{
+					$("#p1").stop(true,true);
+				}
+				);
+		}
+		);
+    </script>
+</head>
+
+
+<body>
+
+    <div id="p1" style="height :100px ;width :100px ;background-color:red ;position: relative;"></div>
+	
+    <button id="bt1">Animate</button>
+	<button id="bt2">Stop</button>
+
+
+</body>
+
+</html>
